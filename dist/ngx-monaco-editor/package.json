@@ -1,0 +1,56 @@
+{
+  "name": "@materia-ui/ngx-monaco-editor",
+  "version": "6.0.1",
+  "author": {
+    "name": "Jean-Marc Roy",
+    "email": "jeanmarc.royy@gmail.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geoastronaute/ngx-monaco-editor"
+  },
+  "description": "Monaco Editor Library for Angular v6 and above",
+  "keywords": [
+    "angular",
+    "monaco-editor",
+    "materia",
+    "code-editor",
+    "electron",
+    "browser"
+  ],
+  "homepage": "https://github.com/geoastronaute/ngx-monaco-editor#readme",
+  "bugs": {
+    "url": "https://github.com/geoastronaute/ngx-monaco-editor/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=13.0.0",
+    "rxjs": ">=6.0.0"
+  },
+  "module": "fesm2015/materia-ui-ngx-monaco-editor.mjs",
+  "es2020": "fesm2020/materia-ui-ngx-monaco-editor.mjs",
+  "esm2020": "esm2020/materia-ui-ngx-monaco-editor.mjs",
+  "fesm2020": "fesm2020/materia-ui-ngx-monaco-editor.mjs",
+  "fesm2015": "fesm2015/materia-ui-ngx-monaco-editor.mjs",
+  "typings": "materia-ui-ngx-monaco-editor.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./materia-ui-ngx-monaco-editor.d.ts",
+      "esm2020": "./esm2020/materia-ui-ngx-monaco-editor.mjs",
+      "es2020": "./fesm2020/materia-ui-ngx-monaco-editor.mjs",
+      "es2015": "./fesm2015/materia-ui-ngx-monaco-editor.mjs",
+      "node": "./fesm2015/materia-ui-ngx-monaco-editor.mjs",
+      "default": "./fesm2020/materia-ui-ngx-monaco-editor.mjs"
+    }
+  },
+  "sideEffects": false
+}

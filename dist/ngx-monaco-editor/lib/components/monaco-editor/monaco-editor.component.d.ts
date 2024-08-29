@@ -1,0 +1,36 @@
+import { ElementRef, EventEmitter, NgZone, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { ControlValueAccessor, ValidationErrors, Validator } from '@angular/forms';
+import { MonacoEditorLoaderService } from '../../services/monaco-editor-loader.service';
+import { MonacoEditorConstructionOptions, MonacoEditorUri, MonacoStandaloneCodeEditor } from '../../interfaces';
+import * as i0 from "@angular/core";
+export declare class MonacoEditorComponent implements OnInit, OnChanges, OnDestroy, ControlValueAccessor, Validator {
+    private monacoLoader;
+    private zone;
+    options: MonacoEditorConstructionOptions;
+    uri?: MonacoEditorUri;
+    insideNgZone: boolean;
+    init: EventEmitter<MonacoStandaloneCodeEditor>;
+    editorContent: ElementRef;
+    editor: MonacoStandaloneCodeEditor;
+    modelUriInstance: monaco.editor.ITextModel;
+    value: string;
+    parsedError: string;
+    private onTouched;
+    private onErrorStatusChange;
+    private propagateChange;
+    get model(): monaco.editor.ITextModel;
+    get modelMarkers(): monaco.editor.IMarker[];
+    constructor(monacoLoader: MonacoEditorLoaderService, zone: NgZone);
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    writeValue(value: string): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    validate(): ValidationErrors;
+    registerOnValidatorChange?(fn: () => void): void;
+    private initEditor;
+    registerEditorListeners(): void;
+    ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MonacoEditorComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MonacoEditorComponent, "ngx-monaco-editor", never, { "options": "options"; "uri": "uri"; "insideNgZone": "insideNgZone"; }, { "init": "init"; }, never, never>;
+}
